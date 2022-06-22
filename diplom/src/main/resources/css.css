@@ -1,0 +1,14 @@
+.icon {
+    width:30px;
+    height:30px;
+    position: relative;
+}
+.txt{
+    background-color:red;
+    font-size:xx-small;
+    position: absolute;
+    padding:2px;
+    top: 5px;
+    left: 5px;
+    border-radius: 25px;
+}

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div style="padding-left:50px; padding-top:30px;">
+    <a href="/api/v1/tasks" class="btn btn-outline-primary btn-rounded" data-mdb-ripple-color="dark">To tasks</a>
+</div>
+
+<div id="btn">Button Here</div>
+
+
+<p>Click the button to make a BUTTON element with text.</p>
+
+<button>Try it</button>
+
+<button>Try1 it</button>
+
+<div class="icon">
+    <img src="https://www.pinclipart.com/picdir/big/189-1895786_big-image-transparent-background-notification-icon-clipart.png" alt="none" width="100%" height="100%" />
+    <div class="txt">1</div>
+</div>
+
+
+<form>
+    <!-- 2 column grid layout with text inputs for the first and last names -->
+
+    <!-- Text input -->
+    <div class="form-outline mb-4">
+        <input type="text" id="form6Example3" class="form-control"/>
+        <label class="form-label" for="form6Example3">Name</label>
+    </div>
+
+    <!-- Message input -->
+    <div class="form-outline mb-4">
+        <textarea class="form-control" id="form6Example7" rows="4"></textarea>
+        <label class="form-label" for="form6Example7">Additional information</label>
+    </div>
+    <div class="row mb-4">
+        <div class="col">
+            <div class="d-flex align-items-center" style="margin-top:30px;">
+                <div class="p-2">Assignee</div>
+                <img src="http://cdn.onlinewebfonts.com/svg/img_415638.png" alt="" style="width: 45px; height: 45px"
+                     class="rounded-circle" />
+                <div class="ms-3">
+                    <p class="fw-bold mb-1">Рахимов Джалил</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="d-flex align-items-center" style="margin-top:30px;">
+                <div class="p-2">Reporter</div>
+                <img src="http://cdn.onlinewebfonts.com/svg/img_415638.png" alt="" style="width: 45px; height: 45px"
+                     class="rounded-circle" />
+                <div class="ms-3">
+                    <p class="fw-bold mb-1">Рахимов Джалил</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col">
+            <div class="d-flex align-items-center" style="margin-top:30px;">
+                <div class="p-2">Date start</div>
+                <input type="date" name="dateStart">
+            </div>
+        </div>
+        <div class="col">
+            <div class="d-flex align-items-center" style="margin-top:30px;">
+                <div class="p-2">Date end</div>
+                <input type="date" name="dateEnd">
+            </div>
+        </div>
+    </div>
+    <div id="1">
+        <button onclick="myFunction(1)" type="button" class="btn btn-outline-primary btn-rounded" data-mdb-ripple-color="dark">Create subtask</button>
+    </div>
+    <div id = "2">
+        <button onclick="myFunction(2)" type="button" class="btn btn-outline-primary btn-rounded" data-mdb-ripple-color="dark">Create nextTask</button>
+    </div>
+
+
+    <!-- Submit button -->
+    <a type="submit" href="google.com" class="btn btn-primary btn-block mb-4">Create template</a>
+</form>
+
+
+
+<script>
+    function myFunction(id) {
+
+        my_form=document.createElement('FORM');
+        my_form.name='myForm';
+        my_form.method='POST';
+        my_form.action='http://www.another_page.com/index.htm';
+
+        div1=document.createElement('div');
+        div1.className = "form-outline mb-4";
+
+        my_tb=document.createElement('INPUT');
+        my_tb.type='TEXT';
+        my_tb.name='name';
+        my_tb.id = 'form6Example3';
+        my_tb.className = "form-control";
+
+        label1=document.createElement('label');
+        label1.innerHTML = 'Name';
+        label1.for='form6Example3';
+        label1.className = "form-label";
+
+
+        div2=document.createElement('div');
+        div2.className = "form-outline mb-4";
+
+        my_tb2=document.createElement('textarea');
+        my_tb2.name='description';
+        my_tb2.rows='4';
+        my_tb2.id = 'form6Example3';
+        my_tb2.className = "form-control";
+
+        label2=document.createElement('label');
+        label2.innerHTML = 'Description';
+        label2.for='form6Example3';
+        label2.className = "form-label";
+
+
+        div3=document.createElement('div');
+        div3.className = "row mb-4";
+
+        div4=document.createElement('div');
+        div4.className = "col";
+
+        div5=document.createElement('div');
+        div5.className = "d-flex align-items-center";
+        div5.style = "margin-top:30px;";
+
+        div6=document.createElement('div');
+        div6.className = "p-2";
+        div6.innerHTML = "Assignee";
+
+        img1=document.createElement('img');
+        img1.src = "http://cdn.onlinewebfonts.com/svg/img_415638.png";
+        img1.alt = "";
+        img1.style = "width: 45px; height: 45px";
+        img1.className = "rounded-circle";
+
+        div7=document.createElement('div');
+        div7.className = "ms-3";
+
+        p1=document.createElement('p');
+        p1.className = "fw-bold mb-1";
+        p1.innerHTML = "Рахимов Джалил";
+
+
+        div8=document.createElement('div');
+        div8.className = "col";
+
+        div9=document.createElement('div');
+        div9.className = "d-flex align-items-center";
+        div9.style = "margin-top:30px;";
+
+        div10=document.createElement('div');
+        div10.className = "p-2";
+        div10.innerHTML = "Reporter";
+
+        img2=document.createElement('img');
+        img2.src = "http://cdn.onlinewebfonts.com/svg/img_415638.png";
+        img2.alt = "";
+        img2.style = "width: 45px; height: 45px";
+        img2.className = "rounded-circle";
+
+        div11=document.createElement('div');
+        div11.className = "ms-3";
+
+        p2=document.createElement('p');
+        p2.className = "fw-bold mb-1";
+        p2.innerHTML = "Рахимов Джалил";
+
+
+        div12=document.createElement('div');
+        div12.className = "row mb-4";
+
+        div13=document.createElement('div');
+        div13.className = "col";
+
+        div14=document.createElement('div');
+        div14.className = "d-flex align-items-center";
+        div14.style = "margin-top:30px;";
+
+        div15=document.createElement('div');
+        div15.className = "p-2";
+        div15.innerHTML = "Date start";
+
+        div16=document.createElement('input');
+        div16.type = "date";
+        div16.name = "datestart";
+
+        div17=document.createElement('div');
+        div17.className = "col";
+
+        div18=document.createElement('div');
+        div18.className = "d-flex align-items-center";
+        div18.style = "margin-top:30px;";
+
+        div19=document.createElement('div');
+        div19.className = "p-2";
+        div19.innerHTML = "Date end";
+
+        div20=document.createElement('input');
+        div20.type = "date";
+        div20.name = "dateend";
+
+        div23=document.createElement('div');
+        div23.className = "row mb-4";
+
+        var today = new Date();
+        var ml = String(today.getMilliseconds()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+        x = Math.random() * (yyyy - mm) + mm;
+        x = parseInt(x, 10);
+
+        today = x + '' + ml;
+
+        div21=document.createElement('div');
+        div21.id = today;
+        div21.className = "col";
+
+        button1=document.createElement('button');
+        button1.setAttribute("onclick", "myFunction(" + div21.id + ")");
+        button1.type = "button";
+        button1.className = "btn btn-outline-primary btn-rounded";
+        button1.setAttribute("data-mdb-ripple-color", "dark");
+        // button1.data-mdb-ripple-color = "dark";
+        button1.style = "margin-left: 63px";
+        button1.innerHTML = "Create sub task";
+
+        var today = new Date();
+        var ml = String(today.getMilliseconds()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+        x = Math.random() * (yyyy - mm) + mm;
+        x = parseInt(x, 10);
+
+        today = x + '' + ml;
+
+        div22=document.createElement('div');
+        div22.id = today;
+        div22.className = "col";
+
+        button2=document.createElement('button');
+        button2.setAttribute("onclick", "myFunction(" + div22.id + ")");
+        button2.type = "button";
+        button2.className = "btn btn-outline-primary btn-rounded";
+        button2.setAttribute("data-mdb-ripple-color", "dark");
+        button2.style = "margin-left: 63px";
+        button2.innerHTML = "Create next task";
+
+
+        my_form.appendChild(div1);
+        my_form.appendChild(div2);
+        my_form.appendChild(div3);
+        my_form.appendChild(div12);
+        my_form.appendChild(div23);
+
+        my_tb.appendChild(label1);
+
+        div1.appendChild(my_tb);
+        div1.appendChild(label1);
+
+        my_tb2.appendChild(label2);
+
+        div2.appendChild(my_tb2);
+        div2.appendChild(label2);
+
+
+        div3.appendChild(div4);
+        div3.appendChild(div8);
+
+        div4.appendChild(div5);
+
+        div5.appendChild(div6);
+        div5.appendChild(img1);
+        div5.appendChild(div7);
+
+        div7.appendChild(p1);
+
+        div8.appendChild(div9);
+
+        div9.appendChild(div10);
+        div9.appendChild(img2);
+        div9.appendChild(div11);
+
+        div11.appendChild(p2);
+
+
+        div12.appendChild(div13);
+        div12.appendChild(div17);
+
+        div13.appendChild(div14);
+
+        div14.appendChild(div15);
+        div14.appendChild(div16);
+
+        div17.appendChild(div18);
+
+        div18.appendChild(div19);
+        div18.appendChild(div20);
+
+        div21.appendChild(button1);
+
+        div22.appendChild(button2);
+
+        div23.appendChild(div21);
+        div23.appendChild(div22);
+
+
+
+
+
+
+
+        // my_tb=document.createElement('INPUT');
+        // my_tb.type='TEXT';
+        // my_tb.name='description';
+        // my_tb.value='Description';
+        // my_form.appendChild(my_tb);
+        //
+        // my_tb=document.createElement('INPUT');
+        // my_tb.type='TEXT';
+        // my_tb.name='myInput';
+        // my_tb.value='Additional information';
+        // my_form.appendChild(my_tb);
+        //
+        //
+        //
+        // my_tb=document.createElement('INPUT');
+        // my_tb.type='HIDDEN';
+        // my_tb.name='hidden1';
+        // my_tb.value='Values of my hidden1';
+        // my_form.appendChild(my_tb);
+        // document.body.appendChild(my_form);
+        // var btn = document.createElement("BUTTON");
+        // btn.innerHTML = "CLICK ME";
+        var a = document.getElementById(id);
+        a.appendChild(my_form);
+    }
+</script>
+</body>
+</html>
